@@ -77,7 +77,7 @@
                 
             }
             .card:hover {
-                
+                cursor:pointer;
                 transform: scale(1.1);
                 transition: transform 0.3s ease;
             }
@@ -106,25 +106,49 @@
             outline: none;
             
             }
+
+           
+
+
+            .submitbutton:hover {
+                color:#5270FF;
+                box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.3);
+                border-radius: 10px;
+                background-color: #ffffff;
+                box-shadow: 1px 1px 10px black;
+                transform: scale(1.05);
+                transition: transform 0.3s ease;
+    
+    
+                cursor: pointer;
+            }
+    
+         
+            .submitbutton:not(:hover) {
+               
+                transform: scale(1);
+                transition: transform 0.3s ease;
+                cursor: pointer;
+            }
         </style>
         <form method="post">
             {% csrf_token %}
             <div class="head1">
-                <h1 style="color: rgb(33, 33, 33); font-size: 50px">创建账号，以获得图书管理系统的权限。</h1>
+                <h1 style="color: rgb(33, 33, 33); font-size: 50px">创建账号，以获得使用图书互助系统的权限。</h1>
             </div>
             <div class="head2">
-                <h1 style="color: rgb(9, 38, 225); font-size: 16px">详细注册申请权限请联系“北京物资学院图书馆”负责人</h1>
+                <h1 style="color: rgb(9, 38, 225); font-size: 16px">详细注册申请权限请联系“北京物资学院信息学院图书互助公邮: yyc110123@163.com</h1>
             </div>
             <div class="registerbox">
                 <div class="card">
                     <div class="info"><img src="../static/touxiang.png" alt="#"></div>
-                    <label style="color: rgb(86, 86, 86); font-size: 20px;font-weight: 500;">图书管理ID &nbsp</label>
+                    <label style="color: rgb(86, 86, 86); font-size: 20px;font-weight: 500;">你的学号ID &nbsp</label>
                     <input type="text" name="rname"><br /><br />
-                    <label style="color: rgb(86, 86, 86); font-size: 20px;font-weight: 400;">唯一认证的密码 &nbsp</label>
+                    <label style="color: rgb(86, 86, 86); font-size: 20px;font-weight: 400;">唯一认证的密码设置 &nbsp</label>
                     <input type="password" name="rpasswd"><br /><br />
-                    
-                        <input class="submit" type="submit" value="创建账号并获得权限">
                    
+                        <input class="submit submitbutton" type="submit" value="创建账号并获得权限">
+                    
                 </div>
             </div>
 
