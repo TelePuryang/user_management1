@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+</head>
+
+
+<div style="text-align: center; margin-top: 60px"></div>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    input,
+    button {
+
+        width: 300px;
+        height: 45px;
+        margin: 0px 8px;
+        text-align: center;
+        border-radius: 6px;
+        /*圆角矩形*/
+        text-indent: 6px;
+        /*里面隐形的字体首行缩进*/
+        margin: 10px auto;
+        background-color: #ebebeb;
+        border: none;
+
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        height: 180px;
+
+
+    }
+
+    .head1 {
+        text-align: center;
+        text-shadow: 3px 2px 50px rgb(109, 109, 109);
+    }
+
+    .head2 {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .registerbox {
+
+        margin-top: 30px;
+
+       
+        text-align: center;
+        border-radius: 40px;
+
+    }
+
+    .card {
+        width: 400px;
+
+        box-shadow: 1px 1px 100px#989898;
+        margin: 0 auto;
+        border-radius: 26px;
+        padding: 40px 0px;
+    }
+
+    .card:hover {
+
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    .card:not(:hover) {
+
+
+        transition: transform 0.3s ease;
+        transform: scale(1.0);
+    }
+
+    .info img {
+
+        width: 80px;
+        height: 80px;
+    }
+
+    .info {
+
+        margin-bottom: 20px;
+    }
+
+    .submit {
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #5270FF;
+        border: none;
+        outline: none;
+
+    }
+    a {
+        text-decoration: none;
+    }
+    
+</style>
+
+<body>
+    <form action="/login/" method="post" class="form-signin">
+        {% csrf_token %}
+        <div class="head1">
+            <h1 style="color: rgb(0, 0, 0); font-size: 60px">登录北京物资学院信息学院图书互助管理库</h1><br><br><br>
+        </div>
+        <div class="registerbox">
+            <div class="card">
+                <div class="info"><img src="../static/touxiang.png" alt="#"></div>
+                <label style="color: rgb(86, 86, 86); font-size: 20px">账号<br>&nbsp</label>
+                <input type="text" name="username"><br /><br />
+                <label style="color: rgb(86, 86, 86); font-size: 20px">密码<br>&nbsp</label>
+                <input type="password" name="password"><br /><br />
+                <input class="submit" type="submit" value="登录"><br>
+                <a href="../register">向负责人申请学院学生使用权限</a>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

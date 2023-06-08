@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主菜单</title>
+    <style>
+        h1 {
+            font-size: 50px;
+            color: rgb(27, 27, 27);
+            text-shadow: 0px 0px 40px rgb(76, 76, 76);
+
+
+        }
+
+        button {
+            background-color: #0068c4;
+            width: 150px;
+            height: 45px;
+            font-size: 20px;
+            border: none;
+            color: rgb(255, 255, 255);
+            /*字体颜色*/
+            border-color: rgb(188, 120, 120);
+            /*边框颜色*/
+            border-radius: 6px;
+            /*圆角矩形*/
+
+
+        }
+
+        button:not(:hover) {
+
+
+
+            transition: transform 0.3s ease;
+
+
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            width: 150px;
+            height: 45px;
+            font-size: 20px;
+            border: none;
+            color: #0068c4;
+            box-shadow: 0px 0px 900px rgb(101, 101, 101);
+            cursor: pointer;
+
+            border-color: rgb(188, 120, 120);
+
+            border-radius: 6px;
+
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+
+
+        }
+
+
+
+
+        h1 {
+            margin-left: 180px;
+        }
+
+        .menu {
+            margin-top: 50px;
+            margin-left: 180px;
+        }
+
+        .titile2 {
+            font-weight: 200;
+            margin-left: 180px;
+            font-size: 20px;
+            width: 600px;
+
+        }
+
+        .menu{
+            padding: 30px;
+            width: 150px;
+           
+        }
+
+        .menu:hover {
+            box-shadow: 0px 0px 4px rgb(0, 0, 0, 0.3);
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 1px 1px 10px black;
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+
+
+            cursor: pointer;
+        }
+
+     
+        .menu:not(:hover) {
+            transform: scale(1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body background="../static/books.jpg" style="background-size: cover">
+
+    <h1 class="titile1">信息学院图书互助系统操作菜单</h1>
+    <div class="titile2">通常对任何经过审核注册的用户都有权限对互助资源的图书进行操作。如果你需要对图书进行操作，你需要确定每本图书的信息的完整性和正确性。针对你的每次修改，系统会保存日志信息。</div>
+    
+        <div class="menu">
+            <a href="/add">
+                <button type="submit">增加</button><br><br>
+            </a>
+            <a href="/delete">
+                <button type="submit">删除</button><br><br>
+            </a>
+            <a href="/update">
+                <button type="submit">修改</button><br><br>
+            </a>
+            <a href="/select">
+                <button type="submit">查询</button><br><br>
+            </a>
+            <a href="/info">
+                <button type="submit">所有</button><br><br>
+            </a>
+            <a href="/login">
+                <button type="button">回到登录页面</button>
+            </a>
+        </div>
+    
+</body>
+
+</html>

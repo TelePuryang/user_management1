@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>查询信息</title>
+
+</head>
+
+<body>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+
+      }
+
+      body {
+
+         text-align: center;
+      }
+
+
+
+      .bookfind {
+         background-color: #f0f0f0;
+         text-align: center;
+         padding: 30px 0px 0px 50px;
+
+      }
+
+      .right {
+         background-color: #ff1414;
+         width: 50%;
+
+
+      }
+
+      .title2 {
+         margin-bottom: 30px;
+      }
+
+      .books {
+        
+         box-shadow: 0px 0px 7000px rgb(206, 206, 206);
+         width: 300px;
+         margin: 0 auto;
+         background-color: #ac1919;
+         margin-bottom: 30px;
+       
+      }
+
+      .results{
+         margin-top: 20px;
+      }
+      .books img {
+         width: 300px;
+         height: 400px;
+
+
+      }
+
+      .isbn,
+      .booktitle,
+      .booktime {
+         color: #f0f0f0;
+         font-size: 20px;
+         background-color: #0068c4;
+      }
+
+      h1 {
+         font-size: 40px;
+         
+         color: rgb(0, 0, 0)
+      }
+
+      label,
+      input {
+         padding: 10px;
+         text-align: center;
+         font-size: 20px;
+         /* border-top: 20px;             padding-top: 20px;内边距*/
+         margin-top: 15px;
+         /*外边距*/
+         width: 180px;
+         /*输入框长度*/
+         color: rgb(0, 0, 0)
+      }
+
+      button {
+         width: 80px;
+         padding: 6px;
+         border: none;
+         border-radius: 8px;
+         background-color: #0068c4;
+         /*控制按钮位置大小及间距*/
+         font-size: 20px;
+      
+         
+         /*border-radius: 10px;*/
+         color: rgb(255, 255, 255);
+
+      }
+
+      button:hover {
+         box-shadow: 1px 1px 10px black;
+         transform: scale(1.4);
+         transition: transform 0.3s ease;
+         background-color: #fff;
+         color: #0068c4;
+         cursor: pointer;
+      }
+
+      button:not(:hover) {
+         transform: scale(1);
+         transition: transform 0.3s ease;
+         cursor: pointer;
+      }
+   </style>
+
+
+   <div class="bigbox">
+
+
+      <div class="bookfind">
+         <h1>图书查询</h1>
+         <form action="/select/" method="post">
+            {% csrf_token %}
+            <label>图书的ISBN号:</label>
+            <input name="id" placeholder="无需输入“-”符号" required>
+            <button type="submit">查询</button>
+         </form>
+         <br>
+         <a href="/login">
+            <button style="background-color: transparent;border-style: hidden;color: rgb(188, 120, 120)">
+               {% if error %}
+               {{ error }}
+               {% endif %}<br>
+            </button>
+         </a>
+         <label style="color: rgb(188, 120, 120)">
+            {% if err %}
+            {{ err }}
+            {% endif %}
+            {% if success %}
+            {{ success }}
+            {% endif %}<br>
+         </label>
+      </div>
+   </div>
+   <div>
+   </div>
+   <div class="results">
+      <h1 class="title2">查询结果如下</h1>
+      <div class="books">
+         <div class="bookimage">
+            <img src="../static/touxiang.png" alt="#">
+         </div>
+         <div class="isbn">{{ id }}</div>
+         <div class="booktitle">{{ Teaname }}</div>
+         <div class="booktime">{{ Teaname }}</div>
+
+      </div>
+      <p>
+         <a href="/welcome">
+            <button style="width:150px;">回到主菜单</button>
+         </a>
+      </p>
+   </div>
+   </div>
+</body>
+
+</html>

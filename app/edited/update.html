@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>更新信息</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+
+    }
+
+    body {
+     
+background-color: #f2f2f2;
+      text-align: center;
+    }
+
+
+
+    .bookfind {
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 30px 0px 0px 50px;
+
+    }
+
+    .right {
+      background-color: #ff1414;
+      width: 50%;
+
+
+    }
+
+    .title2 {
+      margin-bottom: 30px;
+    }
+
+    .books {
+
+      box-shadow: 0px 0px 7000px rgb(206, 206, 206);
+      width: 300px;
+      margin: 0 auto;
+      background-color: #ac1919;
+      margin-bottom: 30px;
+
+    }
+
+    .results {
+      margin-top: 20px;
+    }
+
+    .books img {
+      width: 300px;
+      height: 400px;
+
+
+    }
+
+    .isbn,
+    .booktitle,
+    .booktime {
+      color: #f0f0f0;
+      font-size: 20px;
+      background-color: #0068c4;
+    }
+
+    .updatetip {
+      font-weight: 300;
+      margin: 0 auto;
+      width: 700px;
+      margin-bottom: 20px;
+    }
+
+    .pagetitle {
+      padding: 40px 0px;
+      margin-top: 22px;
+      margin-bottom: 20px;
+    }
+
+    .updatebox {
+      padding: 20px;
+      text-align: center;
+      margin: 40px auto;
+      border-radius: 20px;
+      background-color: #ffffff;
+      width: 400px;
+      height: 500px;
+      ;
+    }
+
+    h1 {
+
+      font-size: 40px;
+
+      color: rgb(0, 0, 0)
+    }
+
+    label,
+    input {
+      padding: 10px;
+      text-align: center;
+      font-size: 20px;
+      /* border-top: 20px;             padding-top: 20px;内边距*/
+      margin-top: 15px;
+      /*外边距*/
+      width: 180px;
+      /*输入框长度*/
+      color: rgb(0, 0, 0)
+    }
+
+    button {
+      width: 80px;
+      padding: 6px;
+      border: none;
+      border-radius: 8px;
+      background-color: #0068c4;
+      /*控制按钮位置大小及间距*/
+      font-size: 20px;
+
+
+      /*border-radius: 10px;*/
+      color: rgb(255, 255, 255);
+
+    }
+
+    .updatebox:hover {
+         box-shadow: 1px 1px 10px black;
+         transform: scale(1.05);
+         transition: transform 0.3s ease;
+        
+    
+         cursor: pointer;
+      }
+
+      .updatebox:not(:hover) {
+         transform: scale(1);
+         transition: transform 0.3s ease;
+         cursor: pointer;
+      }
+    button:hover {
+      box-shadow: 3px 3px 30px black;
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+      background-color: #e30202;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:not(:hover) {
+      transform: scale(1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .imgtip{
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+    }
+
+    .Box{
+      box-shadow: 0px 0px  8px rgb(0, 0, 0,0.3);
+      border-radius: 40px;
+      margin: 0 auto;
+      background-color: #f0f0f0;
+      width: 95%;
+    }
+  </style>
+</head>
+
+<body>
+<div class="Box">
+  <div class="pagetitle">
+    <h1>修改图书信息</h1>
+  </div>
+  <div class="updatetip">
+    我们鼓励对错误的图书信息和资源下载进行修改的操作。但是，如果一个账户对同一本书的修改次数在24小时内超过3次，该账号将被锁定修改图书权限。你的修改记录若被审查为违规恶意修改，将被拉入北京物资学院信息学院图书互助系统黑名单。
+  </div>
+  <div class="updatebox">
+    <div class="imgtip"><img src="../static/update.png" alt="#" style="width: 100%;"></div>
+    <form id="BooksInfo" action="/update/" method="post">
+      {% csrf_token %}
+      <label>IBSN号:</label>
+      <input name='id' placeholder="IBSN号，不带“-”号" required autofocus="autofocus"><br>
+      <label>书籍名:</label>
+      <input name="Booksname" placeholder="书籍名不带“《》" 号><br>
+      <label>出版日期:</label>
+      <input name="Bookstime" placeholder="出版日期格式如19880405"><br>
+
+
+    </form>
+
+    <p style="font-size: 25px">
+      {% if success %}
+      {{ success }}
+      {% endif %}
+    </p>
+    <p style="font-size: 25px; color: rgb(227, 227, 227)">
+      {% if err %}
+      {{ err }}
+      {% endif %}
+    </p>
+    <br>
+    <br>
+    <a href="/welcome/">
+      <button type="submit" style="font-size: 20px">返回</button>
+    </a>
+    <br><br>
+    <button form="BooksInfo" type="submit" style="font-size: 20px">确定</button>
+  </div>
+</div>
+</body>
+
+</html>

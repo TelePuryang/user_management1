@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>所有信息</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+
+      }
+
+      body {
+         text-align: center;
+      }
+
+      label {
+         text-align: center;
+         font-size: 30px;
+      }
+
+      label2 {
+         font-size: 25px;
+      }
+
+      button:hover {
+         box-shadow: 1px 1px 10px black;
+         transform: scale(1.4);
+         transition: transform 0.3s ease;
+         background-color: #e30202;
+         color: white;
+         cursor: pointer;
+      }
+
+      button:not(:hover) {
+         transform: scale(1);
+         transition: transform 0.3s ease;
+         cursor: pointer;
+      }
+
+      td {
+         font-size: 18px;
+         padding: 20px;
+      }
+
+      .infotitle {
+         color: white;
+         padding: 4px;
+         background-color: #5270FF;
+      }
+
+      .booktitle {
+         color: white;
+         background-color: #7c92ff;
+      }
+
+      .bookcard {
+         display: inline-block;
+         background-color: #cbcbcb;
+         width: 200px;
+         height: 320px;
+         padding: 20px;
+      }
+
+      .bookcover {
+         background-color: #2e2727;
+         width: 200px;
+         height: 250px;
+      }
+
+      .bookname {
+         font-size: 17px;
+         padding: 0px 3px;
+      }
+
+      .nav {
+
+         height: 70px;
+         font-size: 20px;
+
+         text-align: justify;
+
+         background-color: #5270FF;
+      }
+
+
+      .logo {
+         display: inline-block;
+         margin-left: 20px;
+
+         width: 200px;
+
+      }
+
+      .navtitle {
+         color: white;
+         display: inline-block;
+         width: 200px;
+
+      }
+   </style>
+</head>
+
+
+
+
+<body>
+   <div class="nav">
+      <div class="logo"><img src="../static/logoschool.png" alt="#" style="width:100%"></div>
+      <div class="navtitle">所有馆藏图书</div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- <th id="id">ISBN号</th>
+      <th>书籍名</th>
+      <th>出版日期</th>
+   </div> -->
+
+   <!-- {% for s in info %}
+   <tr>
+      <td id="id"> {{ s.id }} </td>
+      <td class="booktitle">《{{ s.Booksname }}》</td>
+      {% comment %} 末班表达式直接用 {% endcomment %}
+      <td> {{ s.Bookstime }} </td>
+
+   </tr>
+   {% endfor %} -->
+
+   </table>
+
+
+
+</body>
+
+</html>

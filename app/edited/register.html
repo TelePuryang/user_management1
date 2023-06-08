@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+    <div style="text-align: center; margin-top: 60px"></div>
+
+
+
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <div class="head1">
+                <h1 style="color: rgb(33, 33, 33); font-size: 50px">创建账号，以获得图书管理系统的权限。</h1>
+            </div>
+            <div class="head2">
+                <h1 style="color: rgb(9, 38, 225); font-size: 16px">详细注册申请权限请联系“北京物资学院图书馆”负责人</h1>
+            </div>
+            <div class="registerbox">
+                <div class="card">
+                    <div class="info"><img src="../static/touxiang.png" alt="#"></div>
+                    <label style="color: rgb(86, 86, 86); font-size: 20px;font-weight: 500;">图书管理ID&nbsp</label>
+                    <input type="text" name="rname"><br /><br />
+                    <label style="color: rgb(86, 86, 86); font-size: 20px;font-weight: 400;">唯一认证的密码&nbsp</label>
+                    <input type="password" name="rpasswd"><br /><br />
+                    
+                        <input class="submit" type="submit" value="创建账号并获得权限">
+                   
+                </div>
+            </div>
+
+        </form>
+    </body>
+
+</html>

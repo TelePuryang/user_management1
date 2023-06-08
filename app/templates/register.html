@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+
+    <div style="text-align: center; margin-top: 60px"></div>
+
+
+
+    <body>
+        <style>
+            body{
+                width:100%;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            
+            }
+            
+            input, button {
+               
+                width: 300px;
+                height: 45px;
+                margin: 0px 8px;
+                text-align: center;
+                border-radius: 6px;
+                /*圆角矩形*/
+                text-indent: 6px;
+                /*里面隐形的字体首行缩进*/
+                margin: 10px auto;
+             background-color: #ebebeb;
+            border: none;
+            
+            }
+            
+            body {
+                margin: 0px;
+                padding: 0px;
+                height: 180px;
+            
+            
+            }
+            
+            .head1 {
+                text-align: center;
+                text-shadow: 3px 2px 50px rgb(109, 109, 109);
+            }
+            
+            .head2 {
+                margin-top: 30px;
+                text-align: center;
+            }
+            
+            .registerbox {
+        
+                margin-top: 90px;
+                padding: 0px 0px 100px 60px;
+                text-align: center;
+                border-radius: 40px;
+               
+            
+            }
+            
+            .card {
+                width: 400px;
+               
+                box-shadow: 1px 1px 100px#989898;
+                margin: 0 auto;
+                border-radius: 26px;
+                padding: 40px 0px;
+                
+            }
+            .card:hover {
+                
+                transform: scale(1.1);
+                transition: transform 0.3s ease;
+            }
+            .card:not(:hover) {
+                
+               
+                transition: transform 0.3s ease;
+                transform: scale(1.0);
+            }
+            .info img{
+            
+                width: 80px;
+                height: 80px;
+            }
+            .info{
+             
+               margin-bottom: 20px;
+            }
+            
+            .submit {
+                font-size: 20px;
+                font-weight: 500;
+            color:#ffffff;
+            background-color: #5270FF;
+            border: none;
+            outline: none;
+            
+            }
+        </style>
+        <form method="post">
+            {% csrf_token %}
+            <div class="head1">
+                <h1 style="color: rgb(33, 33, 33); font-size: 50px">创建账号，以获得图书管理系统的权限。</h1>
+            </div>
+            <div class="head2">
+                <h1 style="color: rgb(9, 38, 225); font-size: 16px">详细注册申请权限请联系“北京物资学院图书馆”负责人</h1>
+            </div>
+            <div class="registerbox">
+                <div class="card">
+                    <div class="info"><img src="../static/touxiang.png" alt="#"></div>
+                    <label style="color: rgb(86, 86, 86); font-size: 20px;font-weight: 500;">图书管理ID &nbsp</label>
+                    <input type="text" name="rname"><br /><br />
+                    <label style="color: rgb(86, 86, 86); font-size: 20px;font-weight: 400;">唯一认证的密码 &nbsp</label>
+                    <input type="password" name="rpasswd"><br /><br />
+                    
+                        <input class="submit" type="submit" value="创建账号并获得权限">
+                   
+                </div>
+            </div>
+
+        </form>
+    </body>
+
+</html>

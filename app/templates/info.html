@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>所有信息</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+
+      }
+      button {
+         color:white;
+         font-size:20px;
+         width: 250px;
+         height: 45px;
+         margin: 0px 8px;
+         text-align: center;
+         border-radius: 6px;
+         /*圆角矩形*/
+         text-indent: 6px;
+         /*里面隐形的字体首行缩进*/
+         margin: 10px auto;
+         background-color: #5270FF;
+         border: none;
+ 
+     }
+      .title1{
+         font-weight:600;
+         margin-top:40px;
+         font-size:40px;
+      }
+      body {
+         text-align: center;
+      }
+
+      label {
+         text-align: center;
+         font-size: 30px;
+      }
+
+      label2 {
+         font-size: 25px;
+      }
+
+      button:hover {
+         box-shadow: 1px 1px 10px black;
+         transform: scale(1.05);
+         transition: transform 0.3s ease;
+         background-color: #e30202;
+         color: white;
+         cursor: pointer;
+      }
+
+      button:not(:hover) {
+         transform: scale(1);
+         transition: transform 0.3s ease;
+         cursor: pointer;
+      }
+
+      td {
+         font-size: 18px;
+         padding: 20px;
+      }
+
+      .infotitle {
+         color: white;
+         padding: 4px;
+         background-color: #5270FF;
+      }
+
+      .booktitle {
+         color: white;
+         background-color: #7c92ff;
+      }
+
+      .bookcard {
+         padding: 20px;
+         display: inline-block;
+         
+         width: 200px;
+         
+      }
+
+      .bookcover {
+        
+         box-shadow:1px 1px 3px rgb(203, 203, 203);
+         background-color: #2e2727;
+         width: 200px;
+         height: 250px;
+      }
+
+      .word{
+         
+         background-color:rgb(238, 238, 238);
+         
+      }
+      .bookname {
+         font-size: 18px;
+         padding: 0px 1px;
+      }
+      .bookcode{
+         font-size:14px
+      }
+      .booktime{
+         font-size:5px;
+         padding:0px 0px 6px 0px;
+      }
+
+      .bookcover:hover {
+         
+         box-shadow: 1px 1px 10px black;
+         transform: scale(1.2);
+         transition: transform 0.3s ease;
+        
+         color: white;
+         cursor: pointer;
+         z-index:2;
+      }
+      .bookcover:not(:hover) {
+         transform: scale(1);
+         transition: transform 0.3s ease;
+         cursor: pointer;
+      }
+      .word:hover {
+         box-shadow: 1px 1px 10px black;
+         transform: scale(1.05);
+         transition: transform 0.3s ease;
+        background-color:#5270FF;
+         color: white;
+         cursor: pointer;
+      }
+      .word:not(:hover) {
+         transform: scale(1);
+         transition: transform 0.3s ease;
+         cursor: pointer;
+      }
+
+   </style>
+</head>
+
+
+
+
+<body>
+   
+   <div class="title1">所有图书互助资源一览（按日期排序）<br><a href="/welcome/">
+      <button>对系统进行操作</button>
+   </a></div>
+
+
+
+
+
+
+  
+
+   
+   {% for s in info %}
+   <div class="bookcard">
+      <div class="bookcover">
+         <img src="../static/bookimg.png" alt="#" style="width:100%">
+
+      </div>
+     <div class="word">
+      <div class="bookname">
+         《{{ s.Booksname }}》
+      </div>
+      <div class="bookcode">
+         ISBN &nbsp{{ s.id }}
+      </div>
+      <div class="booktime">
+        出版日期: {{ s.Bookstime }}
+      </div>
+      
+   </div>
+   </div>
+   {% endfor %}
+   <!-- <th id="id">ISBN号</th>
+      <th>书籍名</th>
+      <th>出版日期</th>
+   </div> -->
+
+   <!-- {% for s in info %}
+   <tr>
+      <td id="id"> {{ s.id }} </td>
+      <td class="booktitle">《{{ s.Booksname }}》</td>
+      {% comment %} 末班表达式直接用 {% endcomment %}
+      <td> {{ s.Bookstime }} </td>
+
+   </tr>
+   {% endfor %} -->
+
+   </table>
+
+
+   <br>
+   
+</body>
+
+</html>
