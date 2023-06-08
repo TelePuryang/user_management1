@@ -20,5 +20,5 @@ from django.contrib import admin
 import app.urls
 urlpatterns = [    
     path('admin/',admin.site.urls),
-    path('', include('app.urls')), #连接 index 的路由设置
+    path('', include('app.urls')), 
 ]

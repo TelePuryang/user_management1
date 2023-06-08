@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'user_management.wsgi.application'
 DATABASES = {    
     'default':{         
     'ENGINE': 'django.db.backends.mysql',         
-    'NAME': 'webapp', #你的数据库名称 数据库需要自己提前建好         
-    'USER': 'root', #你的数据库用户名         
-    'PASSWORD':'000000', #你的数据库密码         
-    'HOST': '127.0.0.1', #你的数据库主机，留空默认为localhost         
-    'PORT': '3306', #你的数据库端口    
+    'NAME': 'webapp',    
+    'USER': 'root', 
+    'PASSWORD':'000000',
+    'HOST': '127.0.0.1',         
+    'PORT': '3306',     
     }
 }
 

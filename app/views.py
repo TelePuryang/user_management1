@@ -149,7 +149,7 @@ def login(request):
                 globals()["LoginId"] = emp[0]['UserId']
              
             
-                return redirect('所有图书信息')
+                return redirect('所有图书信息') #使用重定向加路由名称跳到我想要的路由上而不是用request和href
             
             else:
                 return HttpResponse("登录失败,密码错误")        

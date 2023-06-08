@@ -5,18 +5,16 @@
 }
 
 input, button {
-   
+
     width: 300px;
     height: 45px;
     margin: 0px 8px;
     text-align: center;
     border-radius: 6px;
-    /*圆角矩形*/
     text-indent: 6px;
-    /*里面隐形的字体首行缩进*/
     margin: 10px auto;
- background-color: #ebebeb;
-border: none;
+    background-color: #ebebeb;
+    border: none;
 
 }
 
@@ -41,8 +39,8 @@ body {
 .registerbox {
 
     margin-top: 90px;
- 
-background-color: #d41717;
+
+    background-color: #d41717;
     text-align: center;
     border-radius: 40px;
 
@@ -50,39 +48,43 @@ background-color: #d41717;
 
 .card {
     width: 400px;
-   
+
     box-shadow: 1px 1px 100px#989898;
     margin: 0 auto;
     border-radius: 26px;
     padding: 40px 0px;
 }
+
 .card:hover {
-    
+
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+
 .card:not(:hover) {
-    
-   
+
+
     transition: transform 0.3s ease;
     transform: scale(1.0);
 }
-.info img{
+
+.info img {
 
     width: 80px;
     height: 80px;
 }
-.info{
- 
-   margin-bottom: 20px;
+
+.info {
+
+    margin-bottom: 20px;
 }
 
 .submit {
     font-size: 20px;
     font-weight: 500;
-color:#ffffff;
-background-color: #7c92ff;
-border: none;
-outline: none;
+    color: #ffffff;
+    background-color: #7c92ff;
+    border: none;
+    outline: none;
 
 }
