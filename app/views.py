@@ -148,11 +148,16 @@ def login(request):
             if emp[0]['password'] == pwd:
                 globals()["LoginId"] = emp[0]['UserId']
              
-                return render(request, "info.html")
+            
+                return redirect('所有图书信息')
+            
             else:
                 return HttpResponse("登录失败,密码错误")        
         
         
+
+
+
 
 
 
